@@ -231,6 +231,16 @@ The upload the .pdf file:
 After a few seconds, you're going to recieve the shell back to you:
 <img width="1917" height="172" alt="image" src="https://github.com/user-attachments/assets/0d57660c-b585-4533-aa7c-16f8513181ab" />
 
+Clearly we are inside a docker container:
+<img width="1915" height="80" alt="image" src="https://github.com/user-attachments/assets/40d0cee7-4644-49f4-9c4a-44d39f9aef57" />
+
+Now we know that the usual ways to see open ports are not available:
+<img width="1917" height="122" alt="image" src="https://github.com/user-attachments/assets/d6c245c9-bc6c-4e58-baab-44dfa8a26edb" />
+
+But at /tmp we can find something like a porscanner. So let's use it:
+
+
+
 
 
 
